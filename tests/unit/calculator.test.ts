@@ -1,4 +1,4 @@
-import { divide, sum } from "@src/calculator";
+import { divide, subtract, sum } from "@src/calculator";
 import assert, { AssertPredicate } from "node:assert";
 import { beforeEach, describe, test } from "node:test";
 
@@ -26,6 +26,24 @@ describe("[calculator]", () => {
         });
     });
 
+    describe("[subtract]", () => {
+        let termOne: number;
+        let termTwo: number;
+
+        beforeEach(() => {
+            termOne = 10;
+            termTwo = 2;
+        });
+
+        test.skip("[subtract] should subtract the given numbers", () => {
+            const expectedResult: number = 8;
+
+            const result = subtract(termOne, termTwo);
+
+            assert.equal(expectedResult, result);
+        });
+    });
+
     describe("[divide]", () => {
         let dividend: number;
         let quotient: number;
@@ -35,7 +53,7 @@ describe("[calculator]", () => {
             quotient = 2;
         });
 
-        test.skip("[divide] should divide the given numbers", () => {
+        test("[divide] should divide the given numbers", () => {
             const expectedResult: number = 5;
 
             const result = divide(dividend, quotient);
@@ -61,6 +79,6 @@ describe("[calculator]", () => {
             multiplier = 2;
         });
 
-        test.todo("[multiply]", () => { });
+        test.todo("[multiply]", () => {});
     });
 });

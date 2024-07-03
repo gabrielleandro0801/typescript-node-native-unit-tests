@@ -10,6 +10,10 @@ export function sum(candidates: number[]): number {
     });
 }
 
+export function subtract(termOne: number, termTwo: number): number {
+    return termOne - termTwo;
+}
+
 export function divide(dividend: number, quotient: number): number {
     if (quotient === 0) {
         throw new QuotientShallNotBeZeroException();
