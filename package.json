@@ -1,0 +1,27 @@
+{
+  "name": "typescript-node-native-unit-tests",
+  "version": "1.0.0",
+  "description": "Repository with examples of unit tests using NodeJS native features",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "prettier --config .prettierrc 'src/**/*.ts' 'tests/**/*.ts' --write --check",
+    "test": "node -r ts-node/register -r tsconfig-paths/register --test $1",
+    "test:coverage": "c8 -c .nycrc $1",
+    "test:unit": "npm run test:coverage npm run test ./tests/unit/*.test.ts"
+  },
+  "keywords": [
+    "NodeJS",
+    "Unit Tests",
+    "V8"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.14.9",
+    "c8": "10.1.2",
+    "prettier": "3.3.2",
+    "ts-node-dev": "2.0.0",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.5.3"
+  }
+}
