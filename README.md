@@ -3,6 +3,7 @@
 Repository with examples of unit tests using NodeJS native features
 
 **Configuration**
+
 Run the following command to add the required libraries to run the code.
 
 ``` bash
@@ -10,6 +11,7 @@ npm install
 ```
 
 **Running**
+
 Run the following command to run the Unit Tests.
 
 ``` bash
